@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Invitación | Minecraft Server</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    
+    <div class="welcome-overlay" id="welcomeOverlay">
+        <div class="welcome-scene">
+            <div class="welcome-hint" id="welcomeHint">
+                ROMPE EL BLOQUE DE COMANDO
+                <span>Haz clic varias veces</span>
+            </div>
+
+            <div class="command-breaker" id="commandBreaker">
+                <div class="command-console" id="commandConsole" aria-hidden="true"></div>
+
+                <div class="block-wrap" id="blockWrap">
+                    <div class="break-crack crack-1"></div>
+                    <div class="break-crack crack-2"></div>
+                    <div class="break-crack crack-3"></div>
+                    <img
+                        class="command-block"
+                        id="commandBlock"
+                        src="bloquecomando.gif"
+                        alt="Bloque de comando de Minecraft"
+                        draggable="false"
+                    >
+                    <div class="break-overlay" id="breakOverlay"></div>
+                </div>
+
+                <div class="break-progress">
+                    <div class="break-progress-track">
+                        <div class="break-progress-fill" id="breakProgress"></div>
+                    </div>
+                    <span id="breakCount">0 / 50</span>
+                </div>
+            </div>
+
+            <div class="letter" id="letter" aria-hidden="true">
+                <div class="letter-inner">
+                    <h2>FELICIDADES</h2>
+                    <div class="letter-line"></div>
+                    <p class="letter-message">
+                        Has conseguido romper el bloque.<br>
+                        Ahora sí... la invitación es tuya.
+                    </p>
+                    <button class="enter-site" id="enterSite">
+                        DESCUBRIR <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="background"></div>
+    <div class="noise"></div>
+
+    <div id="particles"></div>
+
+    
+    <section class="hero page-behind" id="homePage">
+
+        <div class="top-badge">
+            <span class="dot"></span>
+            INVITACIÓN EXCLUSIVA
+        </div>
+
+        <div class="content">
+
+            <p class="eyebrow">
+                UN NUEVO MUNDO TE ESTÁ ESPERANDO
+            </p>
+
+            <h1>
+                HAS SIDO<br>
+                <span>ELEGIDO.</span>
+            </h1>
+
+            <p class="description">
+                No todos reciben esta invitación.
+                <br><br>
+                Estamos reuniendo a un grupo de jugadores para crear
+                algo más que un servidor.
+                <br>
+                Una historia. Una comunidad. Un mundo.
+            </p>
+
+            <div class="divider"></div>
+
+            <div class="invitation-card">
+
+                <div class="card-glow"></div>
+
+                <div class="card-content">
+
+                    <div class="card-top">
+
+                        <span class="server-label">
+                            By: botsraids
+                        </span>
+
+                        <span class="status">
+
+                            <span class="status-dot"></span>
+
+                            ONLINE
+
+                        </span>
+
+                    </div>
+
+                    <img
+                        src="sabrosoneria.png"
+                        alt="Sabrosoneria Extrema"
+                        class="server-title-img"
+                        draggable="false"
+                    >
+
+                    <p>
+                        Tu aventura comienza aquí.
+                        Explora, construye, lucha y deja tu marca
+                        en un mundo que evoluciona con sus jugadores.
+                    </p>
+
+                    <div class="stats">
+
+                        <div class="stat">
+
+                            <span class="stat-number">NA</span>
+
+                            <span class="stat-text">
+                                DISPONIBLE
+                            </span>
+
+                        </div>
+
+                        <div class="stat">
+
+                            <span class="stat-number">EXTREMA</span>
+
+                            <span class="stat-text">
+                                EXPERIENCIA
+                            </span>
+
+                        </div>
+
+                        <div class="stat">
+
+                            <span class="stat-number">100</span>
+
+                            <span class="stat-text">
+                                JUGADORES
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="join-button sound-button"
+                        id="joinButton"
+                    >
+
+                        <span>
+                            ACEPTAR INVITACIÓN
+                        </span>
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </button>
+
+                    <p class="ip-text">
+
+                        IP:
+                        <span id="serverIP">
+                            tumadre.con
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <p class="footer-text">
+                ¿ESTÁS PREPARADO PARA ENTRAR?
+            </p>
+
+        </div>
+
+    </section>
+
+    
+    <section
+        class="form-page"
+        id="formPage"
+    >
+
+        <div class="form-container">
+
+            <button
+                class="back-button sound-button"
+                id="backButton"
+            >
+                ← VOLVER
+            </button>
+
+            <p class="eyebrow">
+                ÚLTIMO PASO
+            </p>
+
+            <h1 class="form-title">
+
+                TU HISTORIA<br>
+
+                <span>COMIENZA AQUÍ.</span>
+
+            </h1>
+
+            <p class="form-description">
+
+                Completa tus datos para solicitar acceso
+                al servidor.
+
+            </p>
+
+            
+            <form
+                id="applicationForm"
+                action="https://formsubmit.co/sabrosoneriaextrema@gmail.com"
+                method="POST"
+            >
+
+                
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="Nueva solicitud para el servidor de Minecraft"
+                >
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="false"
+                >
+
+                <input
+                    type="hidden"
+                    name="_template"
+                    value="table"
+                >
+
+                
+                <div class="input-group">
+
+                    <label for="discord">
+
+                        USUARIO DE DISCORD
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="discord"
+                        name="Usuario de Discord"
+                        placeholder="Ejemplo: jugador_123"
+                        required
+                    >
+
+                </div>
+
+                
+                <div class="input-group">
+
+                    <label for="minecraft">
+
+                        USUARIO DE MINECRAFT
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="minecraft"
+                        name="Usuario de Minecraft"
+                        placeholder="Ejemplo: Steve123"
+                        required
+                    >
+
+                </div>
+
+                
+                <div class="input-group">
+
+                    <label for="name">
+
+                        NOMBRE
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="Nombre"
+                        placeholder="Tu nombre"
+                        required
+                    >
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="submit-button sound-button"
+                >
+
+                    ENVIAR SOLICITUD
+
+                    <span>→</span>
+
+                </button>
+
+                <p class="privacy-text">
+
+                    Tus datos serán utilizados únicamente
+                    para gestionar tu acceso al servidor.
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    
+    <audio
+        id="clickSound"
+        preload="auto"
+    >
+
+        <source
+            src="mcclick.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+    <audio
+        id="bgMusic"
+        preload="auto"
+        loop
+    >
+
+        <source
+            src="c418musoc.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+    <audio
+        id="breakStartSound"
+        preload="auto"
+    >
+
+        <source
+            src="sfxcomienzo.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+    <audio
+        id="blockBrokenSound"
+        preload="auto"
+    >
+
+        <source
+            src="commandblockbrokensfx.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
